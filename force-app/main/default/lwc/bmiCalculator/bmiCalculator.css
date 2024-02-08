@@ -1,0 +1,71 @@
+:host(){
+    --dark-blue: #0b0d21;
+    --light-white: #fafafa;
+    --light-blue: #4f7df9;
+    --light-pink: #E30B5C;
+    --size-12: 12px;
+    --size-16: 16px;
+    --size-20: 20px;
+}
+
+.box{
+    margin: auto;
+    text-align: center;
+    max-width: 450px;
+    background: var(--dark-blue);
+    color: var(--light-white);
+    padding: var(--size-16);
+    border-radius: var(--size-20);
+}
+
+h1{
+    font-size: 36px;
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+.app{
+    min-height: 100vh;
+    background-image: url(/sfsites/c/resource/bmiCalculator);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.info-wrapper{
+    background: #1d1e33;
+    padding: 16px;
+    border-bottom-left-radius: 38px;
+    border-bottom-right-radius: 38px;
+    font-size: 14px;
+    text-align: center;
+}
+
+h2{
+    font-size: 26px;
+    color: palevioletred;
+}
+
+.inputHeading{
+    font-size: 20px;
+    color: var(--light-white);
+    font-weight: bold;
+    
+}
+
+input{
+    padding: 8px;
+    font-size: var(--size-16);
+}
+
+.submit-button{
+    background: var(--light-pink);
+    font-size: var(--size-16);
+    padding: var(--size-12);
+    border-color: var(--dark-blue);
+    color: var(--light-white);
+}
+
+.result-value{
+    font-size: 16px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,53 @@
+<template>
+    <div class="app slds-var-p-around_medium">
+        <div class="box">
+            <h1>BMI Calculator</h1>
+            <template if:true={result}>
+                <section>
+                    <h2>Your BMI value is: </h2>
+                    <div class="result-value">{bmi}</div>
+                    <h2> So you are: </h2>
+                    <div class="result-value">{result}</div>
+                    <button class="slds-button slds-button_neutral slds-button_stretch slds-var-m-bottom_large submit-button" onclick={recalculate}>Re-Calculate your BMI</button>
+                </section>
+            </template>
+
+            <template if:false={result}>
+                <form onsubmit={submitHandler}>
+                    <div class="slds-form-element slds-var-m-bottom_medium">
+                        <label class="inputHeading slds-form-element__label slds-text-title_bold" for="text-input-height">
+                            Height (Cm)
+                        </label>
+                        <div class="slds-form-element__control">
+                            <input type="number" id="text-input-height" min="0" name="height" placeholder="Enter your height in Cm" required class="slds-input" onchange={inputHander} />
+                        </div>
+                    </div>
+                    <div class="slds-form-element slds-var-m-bottom_medium">
+                        <label class="inputHeading slds-form-element__label slds-text-title_bold" for="text-input-weight">
+                            Weight (Kg)
+                        </label>
+                        <div class="slds-form-element__control">
+                            <input type="number" id="text-input-weight" min="0" name="weight" placeholder="Enter your weight in kg" required class="slds-input" onchange={inputHander} />
+                        </div>
+                    </div>
+                    <button class="slds-button slds-button_neutral slds-button_stretch slds-var-m-bottom_large submit-button">Calculate my BMI</button>
+                </form>                
+            </template>
+
+            <div class="info-wrapper">
+                <h2>What your BMI means:</h2>
+                <p class="slds-var-m-bottom_large">Once you have measured your BMI, You can determine your health range</p>
+                <h3 class="slds-text-color_error slds-text-heading_medium">Under 18.5</h3>
+                <p class="slds-var-m-bottom_large">You are underweight</p>
+                <h3 class="slds-text-color_success slds-text-heading_medium">Between 18.5 to 24.0</h3>
+                <p class="slds-var-m-bottom_large">Your weight is normal.</p>
+                <h3 class="slds-text-color_error slds-text-heading_medium">Between 24.1 and 29.9</h3>
+                <p class="slds-var-m-bottom_large">Overweight or obesity level I (classification of overweight)</p>
+                <h3 class="slds-text-color_error slds-text-heading_medium">Over 30.0</h3>
+                <p class="slds-var-m-bottom_large">Overweight or obesity level II (classification of severe overweight)</p>
+            </div>
+        </div>
+
+    </div>
+    
+</template>

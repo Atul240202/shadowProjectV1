@@ -1,0 +1,33 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card>
+        <div>
+            <lightning-combobox 
+            class="boxMargin"
+            value={selectedAccId}
+            options={accountOptions}
+            onchange={handleAccountChange}
+            label="Select Account">
+                
+            </lightning-combobox>
+        </div>
+        <div>
+            <template if:true={contactData}>
+                <lightning-datatable 
+                data={contactData} 
+                columns={columns} 
+                key-field="Id" 
+                onrowaction={selectedContactAction}>
+
+                </lightning-datatable>
+            </template>
+        </div>
+        <div>
+            <template if:false={contactData}>
+                <h1>Unable to fetch contact data</h1>
+            </template>
+        </div>
+        
+    </lightning-card>
+    
+</template>
