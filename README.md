@@ -5,11 +5,9 @@ In this repository, I will be uploading various mini projects related to Apex cl
 
 ## Code of all the projects
 
-- BMI Calculator: [Access the website here](https://yopmailcom241-dev-ed.develop.my.site.com/atulsportfolio/calculate-your-bmi) & [Access the code here](#)
+- BMI Calculator: [Access the website here](https://yopmailcom241-dev-ed.develop.my.site.com/atulsportfolio/calculate-your-bmi) & [Access the code here](https://github.com/Atul240202/shadowProjectV1/tree/main/force-app/main/default/lwc/bmiCalculator)
+- One the way....
 
-## Configure Your Salesforce DX Project
-
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
 
 ## Read All About It
 
