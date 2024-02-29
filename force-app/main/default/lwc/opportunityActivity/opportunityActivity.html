@@ -1,0 +1,20 @@
+<template>
+    <lightning-accordion allow-multiple-sections-open active-section-name="activitySection">
+        <lightning-accordion-section label="Activity" name="activitySection">
+            <template if:true={tasks}>
+                <template for:each={tasks} for:item="task">
+                    <lightning-accordion-section key={task.Id} label={task.Subject}>
+                        <template if:true={task.Status}>
+                            <p>{task.Status}</p>
+                        </template>
+                    </lightning-accordion-section>
+                </template>
+            </template>
+            <template if:false={tasks}>
+                <div class="slds-text-color_error">
+                    <h1>Loading...</h1>
+                </div>
+            </template>
+        </lightning-accordion-section>
+    </lightning-accordion>
+</template>
